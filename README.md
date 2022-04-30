@@ -1,4 +1,4 @@
-# BDW1 - Projet mini-Pinterest
+# Projet mini-Pinterest
 
 
 ## 📸 À propos :
