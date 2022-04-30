@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+  --black: #1b1b1b;
+  --lightgrey: #dedede;
+  --grey: #797979;
+  --error: #f51f1f;
+  --confirm: #aee719;
+  --transition: .4s ease-in-out;
+}
+
+html div {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter';
+  font-size: 12px;
+  color: var(--black);
+  line-height: 1.3;
+  margin: 0;
+}
+
+a {
+  color: var(--black);
+}
+
+/* Boutons */
+input.button, button.button {
+  height: fit-content;
+  background: var(--black);
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+input.button:hover, button.button:hover {
+  background: var(--grey);
+}
+
+.errorMsg {
+  width: fit-content;
+  color: var(--error);
+  font-weight: bold;
+}
+
+.confirmMsg {
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--confirm);
+  font-weight: bold;
+}
+
+.grand-titre {
+  width: 100%;
+  text-align: left;
+}
+
+.grand-titre span {
+  font-size: 1.3em;
+  background: var(--black);
+  color: white;
+  padding: 0 5px;
+}
+
+/*  -----------------------
+      BARRE DE NAVIGATION
+    -----------------------  */
+.navigation {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  padding: 20px 30px;
+  background: none;
+  border-bottom: 1px solid var(--lightgrey);
+}
+
+.navigation .nav-utilisateur {
+  width: 40%;
+  font-size: 1.3em;
+}
+
+.navigation role {
+  background: var(--black);
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 5px;
+}
+
+.navigation .nav-utilisateur i {
+  color: var(--grey);
+  font-size: 0.9em;
+}
+
+.navigation .nav-boutons {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.navigation form {
+  margin: 0;
+}
+
+.nav-utilisateur a {
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.nav-utilisateur a:hover {
+  color: var(--grey);
+}
+
+.nav-boutons a, .navigation input {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: var(--black);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation .boutonNav {
+  padding: 2px 5px;
+  border-bottom: 2px solid var(--black);
+}
+
+.navigation .boutonNav:hover {
+  border-bottom: 2px solid var(--grey);
+  color: var(--grey);
+}
+
+.navigation .boutonInscrip {
+  border: 2px solid var(--black);
+  padding: 8px 20px;
+}
+
+.navigation .boutonInscrip:hover {
+  border: 2px solid var(--grey);
+  color: var(--grey);
+}
+
+/*  -----------------------
+       CATEGORIES
+    -----------------------  */
+.categories {
+  width: 100%;
+  padding: 30px 30px 10px 30px;
+  text-align: center;
+}
+
+.categories select {
+  width: 150px;
+  border: 1px solid var(--black);
+  padding: 3px 0;
+  color: inherit;
+}
+
+.categories form {
+  margin: 5px 0;
+}
+
+.categories .nom-categorie {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 1.4em;
+}
+
+/*  -----------------------
+          CONNEXION
+    -----------------------  */
+.connection {
+  width: 400px;
+  margin: 30px auto;
+  border: 1px solid var(--black);
+  padding: 30px;
+  text-align: center;
+}
+
+.connection a {
+  transition: var(--transition);
+}
+
+.connection a:hover {
+  color: var(--grey);
+}
+
+.connec-titre {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.loginInfo, .modifInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/*  -----------------------
+       GALERIE DE PHOTOS
+    -----------------------  */
+.galerie {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  margin: auto;
+}
+
+.galerieProfil {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+}
+
+.gutter-size {
+  width: 15px;
+}
+
+.galerie img, .galerieProfil img {
+  max-width: 185px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: filter var(--transition);
+}
+
+.galerie img:hover, .galerieProfil img:hover {
+  filter: grayscale(0.4) brightness(0.7);
+}
+
+/*  -----------------------
+       DETAIL D'UNE PHOTO
+    -----------------------  */
+.detailphoto {
+  width: fit-content;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  gap: 20px;
+}
+
+.photo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+}
+
+.photo img {
+  width: auto;
+  max-height: 350px;
+}
+
+.optionsBoutons {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+}
+
+#formModif {
+  width: 300px;
+  justify-content: space-between;
+  margin: 30px auto;
+  display: none;
+}
+
+#formModif form {
+  width: 100%;
+}
+
+/*  -----------------------
+             PROFIL
+    -----------------------  */
+.blocProfil {
+  width: 100%;
+  padding: 30px 30px 0 30px;
+}
+
+.grand-titre button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#profilInfo {
+  width: 100%;
+  padding: 30px 0;
+}
+
+#profilInfoModif {
+  display: none;
+  width: 100%;
+  padding: 20px 0 30px 0;
+}
+
+.mdpProfil {
+  margin: 10px 0;
+}
+
+/*  -----------------------
+       AJOUTER UNE IMAGE
+    -----------------------  */
+.ajouter {
+  width: 350px;
+  margin: auto;
+  padding: 30px;
+}
+
+.ajouter form {
+  margin: 20px 0;
+}
+
+/*  -----------------------
+         PROFIL ADMIN
+    -----------------------  */
+.listeAdmins {
+  padding: 0 30px 30px 30px;
+}
+
+.listeUsers {
+  padding: 0 30px;
+}
+
+.statistiques {
+  padding: 30px 30px 0 30px;
+}
+
+.statistiques table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  border: 1px solid var(--grey);
+}
+
+.statistiques th, .statistiques td {
+  border: 1px solid var(--grey);
+  padding: 5px;
+}
